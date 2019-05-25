@@ -1,16 +1,10 @@
 box:
   id: node
-  tag: 8.10.0
+  tag: 10.15.0
   ports:
     - '80'
     - '8888'
     - '8889'
-
-services:
-  - id: mongo
-    tag: 3.4.1
-    ports:
-     - '27017'
 
 dev:
   steps:

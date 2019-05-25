@@ -5,11 +5,11 @@
   "main": "server/index.js",
   "scripts": {
     "lint": "node_modules/.bin/standard",
-    "dev": "node_modules/.bin/forever --killSignal=SIGTERM --minUptime 1000 --spinSleepTime 1000 server/index.js -p 80",
-    "build": "next build client",
-    "export": "next export client",
-    "start": "next build client && next start client -p 80",
-    "analyze": "cross-env ANALYZE=1 next build client"
+    "dev": "next -p 80",
+    "build": "next build",
+    "export": "next export",
+    "start": "next build && next start -p 80",
+    "analyze": "cross-env ANALYZE=1 next build"
   },
   "repository": {
     "type": "git",
@@ -32,13 +32,11 @@
     "standard": "11.0.1",
     "@zeit/next-sass": "^0.2.1-canary.4",
     "@zeit/next-css": "^0.2.1-canary.4",
-    "forever": "0.15.3",
     "next": "8.0.3",
     "react": "16.6.0",
     "next-redux-wrapper": "3.0.0-alpha.2",
     "react-dom": "16.4.2",
     "normalize.css": "8.0.0",
-    "express": "^4.16.2",
     "node-sass": "^4.11.0",
     "extract-text-webpack-plugin": "4.0.0-beta.0",
     "redux": "4.0.0",
@@ -49,9 +47,6 @@
     "axios": "0.18.0",
     "cross-env": "5.2.0",
     "webpack-bundle-analyzer": "2.13.1",
-    "node-seeder": "1.1.2",
-    "mongoose": "5.4.18",
-    "mongoose-find-or-create": "1.2.0",
     "lodash": "4.17.11"
   },
   "devDependencies": {
